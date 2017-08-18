@@ -22,7 +22,8 @@ This repository contains dictionaries found on some FTPs and other repos. They c
 ## Solution
 
 #### Base information
-You can use Redis NoSQL to perform fast autocomplete. 
+
+You can use Redis NoSQL to perform fast autocomplete. First of all you need load all data into Redis database and then give interface to perform sarch queries.
 
 #### Loading data
 
@@ -40,7 +41,7 @@ We will use [`ZRANGEBYLEX`](https://redis.io/commands/zrangebylex) command and w
 
 ## Installation
 
-Just clone this repository using git, and then install dependancies using:
+Just clone this repository using git and then and install dependancies using:
 
 `pip install -r requirements.txt`
 
