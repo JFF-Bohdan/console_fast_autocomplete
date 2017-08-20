@@ -30,7 +30,7 @@ You can use Redis NoSQL to perform fast autocomplete. First of all you need load
 First of all we will use [`ZADD`](https://redis.io/commands/zadd) command to load items into sorted set. We will specify same score `0.0` to each item, so them will sorted lexicographically in the set.
 
 
-To implement **case intensive search** we will use some little trick. Before adding each item to the set we will convert it to lowercase and will add original item after `:` separator. So when we have want add word `Wood` to the set, actually we will add `wood:Wood`. In this case we will be able to perform case intensive search and also save original word.
+To implement **case insensitive search** we will use some little trick. Before adding each item to the set we will convert it to lowercase and will add original item after `:` separator. So when we have want add word `Wood` to the set, actually we will add `wood:Wood`. In this case we will be able to perform case insensitive search and also save original word.
 
 We will use pipelines (part of `redis` Python library) to increase loading speed. They will help us to buffer `ZADD` commands and reduce the number of back-and-forth TCP packets between the client and server. They helps us to dramatically increase the loading performance.
 
