@@ -10,7 +10,7 @@ import zipfile
 import redis
 
 
-REDIS_ZSET_NAME = "female_names"
+REDIS_ZSET_NAME = "string_search_zset"
 TMP_DIR = "./tmp"
 
 

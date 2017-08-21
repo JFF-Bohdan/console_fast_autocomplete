@@ -80,7 +80,7 @@ Where:
 
 You can load all information from data files using:
 
-`string_search.py --config .\conf\default.conf  --init-data`
+`string_search.py --config ./conf/default.conf --init-data`
 
 program will look for all files in this folder. If `.zip` file will be found, it will be uncompressed into temporary folder for further loading.
 
@@ -90,12 +90,12 @@ This operation can took long time, up to 1 minute on slow machines.
 
 To perform search for `alexa` query you should use:
 
-`string_search.py --config .\conf\default.conf  --search alexa`
+`string_search.py --config ./conf/default.conf --search alexa`
 
 ### Checking items count
 
 You can check count of items in database by using:
 
-`string_search.py --config .\conf\default.conf  --get-length`
+`string_search.py --config ./conf/default.conf --get-length`
 
 Enjoy!
